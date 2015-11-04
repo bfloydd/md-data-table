@@ -308,7 +308,8 @@ function mdTableHead($mdTable, $q) {
       var ngRepeat = $mdTable.getAttr(tElement.parent().find('tbody').find('tr'), 'ngRepeat');
       
       if(ngRepeat) {
-        tElement.find('tr').prepend(angular.element('<th md-select-all="' + $mdTable.parse(ngRepeat).items + '"></th>'));
+        //B
+        //tElement.find('tr').prepend(angular.element('<th md-select-all="' + $mdTable.parse(ngRepeat).items + '"></th>'));
       }
     }
     
@@ -764,7 +765,8 @@ function mdSelectRow($mdTable) {
       checkbox.attr('ng-disabled', 'isDisabled()');
     }
     
-    tElement.prepend(angular.element('<td></td>').append(checkbox));
+    //B
+    // tElement.prepend(angular.element('<td></td>').append(checkbox));
     
     if(angular.isDefined(tAttrs.mdAutoSelect)) {
       tAttrs.$set('ngClick', 'toggleRow(' + ngRepeat.item + ', $event)');
